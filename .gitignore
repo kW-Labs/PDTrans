@@ -1,0 +1,8 @@
+
+.idea/
+__pycache__/
+data/elect/*.npy
+output_elect/DeFigs/*.png
+output_elect/train.log
+output_elect/metrics_test_best.json
+output_elect/model_state.pth.tar
