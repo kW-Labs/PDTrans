@@ -15,7 +15,7 @@ from itertools import chain
 import torch.nn.functional as functional
 import utils
 from utils import EarlyStopping
-import PDTransformer as transformer
+import pdtransformer as transformer
 from evaluate import *
 from dataloader import *
 
@@ -31,8 +31,8 @@ logger = logging.getLogger('PDTrans.Train')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', default='elect', help='Name of the dataset')
-parser.add_argument('--data-folder', default='PDTrans/data', help='Parent dir of the dataset')
-parser.add_argument('--model-name', default='PDTrans/output_elect', help='Directory containing params.json')
+parser.add_argument('--data-folder', default='data', help='Parent dir of the dataset')
+parser.add_argument('--model-name', default='output_elect', help='Directory containing params.json')
 parser.add_argument('--relative-metrics', action='store_true', help='Whether to normalize the metrics by label scales')
 parser.add_argument('--save-best', action='store_true', help='Whether to save best ND to param_search.txt')
 parser.add_argument('--restore-file', default=None, help='Optional, name of the file in --model_dir containing weights to reload before training')
